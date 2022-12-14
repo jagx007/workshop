@@ -20,6 +20,10 @@ def div():
     x = a / b
     return x
 
+def flr():
+    x = a // b
+    return x
+
 def mod():
     x = a % b
     return x
@@ -32,7 +36,7 @@ def pow():
 while True:
     a = int(input('Enter a number: '))
     b = int(input('Enter a number: '))
-    c = int(input('\t1. ADD \n \t2. SUBSTRACT \n \t3. MULTIPLY \n \t4. DIVIDE \n \t5. MODULUS \n \t6. POWER \n \t enter: '))
+    c = int(input('\t1. ADD \n \t2. SUBSTRACT \n \t3. MULTIPLY \n \t4. DIVIDE \n \t5. FLOOR DIVISION \n \t6. MODULUS \n \t7. POWER \n \t enter: '))
 
     if c == 1:
         print(f'{a} + {b} = ', add())
@@ -45,11 +49,14 @@ while True:
 
     elif c == 4:
         print(f'{a} / {b} = ', div())
-
+    
     elif c == 5:
+        print(f'{a} // {b} = ', flr())
+    
+    elif c == 6:
         print(f'{a} % {b} = ', mod())
 
-    elif c == 6:
+    elif c == 7:
         print(f'{a} ^ {b} = ', pow())
 
     else:
